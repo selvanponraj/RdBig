@@ -1,7 +1,12 @@
-// The Typesafe repository
+// pulls in: sbt-pgp, sbt-release, sbt-mima-plugin, sbt-dependency-graph, sbt-buildinfo, sbt-sonatype
+addSbtPlugin("org.typelevel" % "sbt-typelevel" % "0.3.1")
 
-resolvers += "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/"
+addSbtPlugin("com.typesafe.sbt" % "sbt-git" % "0.6.2")
 
-// Use the Play sbt plugin for Play projects
-addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.2.0")
-addSbtPlugin("net.virtual-void" % "sbt-cross-building" % "0.8.1")
+addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.11.2")
+
+addSbtPlugin("com.scalapenos" % "sbt-prompt" % "0.2.1")
+
+// For Intellij users of older versions:
+// This might already be in ~/.sbt.. for Scala users
+addSbtPlugin("com.github.mpeltonen" % "sbt-idea" % "1.6.0")
